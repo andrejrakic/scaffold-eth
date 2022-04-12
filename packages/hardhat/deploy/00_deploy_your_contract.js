@@ -6,6 +6,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
 
   await deploy("YourContract", {
     from: deployer,
+    args: [process.env.SUBSCRIPTION_ID],
     log: true,
     waitConfirmations: 5
   });
